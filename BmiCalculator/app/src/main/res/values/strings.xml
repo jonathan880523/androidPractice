@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BmiCalculator</string>
+    <string name="height">키</string>
+    <string name="weight">몸무게</string>
+    <string name="result">결과</string>
+    <string name="title_activity_result">ResultActivity</string>
+</resources>
