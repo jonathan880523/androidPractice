@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DDENGJABI</string>
+    <string name="mainTitleText">땡잡이 결정전</string>
+    <string name="gameStartText">게임 시작</string>
+    <string name="saveTime">땡잡이</string>
+    <string name="resultContext">너가 사</string>
+</resources>
