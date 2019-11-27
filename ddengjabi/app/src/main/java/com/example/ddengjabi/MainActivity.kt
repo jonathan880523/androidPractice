@@ -25,4 +25,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-//TODO 화면 이동까지만 마무리됨 버튼 이벤트, 기능들 추가필요
