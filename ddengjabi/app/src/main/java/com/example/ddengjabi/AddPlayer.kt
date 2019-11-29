@@ -27,29 +27,32 @@ class AddPlayer : AppCompatActivity() {
             val intent = Intent(this, stopWatch::class.java)
             intent.putStringArrayListExtra("playerList", playerList)
             startActivity(intent)
-
         }
         
         
         //플레이어 추가 버튼 클릭시
         addInputLineFab.setOnClickListener {
             val sPlayerName = inputNameEditBox.text
-            val textTitle = TextView(this)
-            val textView = TextView(this)
-            textView.text = "${order}: ${sPlayerName}"
-            textTitle.text = "순서"
+            if(!sPlayerName.isEmpty()){
+                val textTitle = TextView(this)
+                val textView = TextView(this)
+                textView.text = "${order}: ${sPlayerName}"
+                textTitle.text = "순서"
 
-            if(idx == 1){
-                lapLayOut.addView(textTitle, 0)
-                lapLayOut.addView(textView, idx)
+                if(idx == 1){
+                    lapLayOut.addView(textTitle, 0)
+                    lapLayOut.addView(textView, idx)
+                }else{
+                    lapLayOut.addView(textView, idx)
+                }
+                idx++
+                order++
+                val inputName: String = sPlayerName.toString()
+                inputNameEditBox.text = null
+                playerList.add(inputName)
             }else{
-                lapLayOut.addView(textView, idx)
+                Toast.makeText(this, "이름을 입력해주세요.", Toast.LENGTH_LONG).show()
             }
-            idx++
-            order++
-            val inputName: String = sPlayerName.toString()
-            inputNameEditBox.text = null
-            playerList.add(inputName)
         }
     }
 }
