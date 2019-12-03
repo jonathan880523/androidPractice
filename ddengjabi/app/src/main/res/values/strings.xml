@@ -5,4 +5,5 @@
     <string name="saveTime">땡잡이</string>
     <string name="resultContext">너가 사</string>
     <string name="show_result">결과보기</string>
+    <string name="ime_add">추가</string>
 </resources>
