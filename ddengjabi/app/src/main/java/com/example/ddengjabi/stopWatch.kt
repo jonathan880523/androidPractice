@@ -69,6 +69,8 @@ class stopWatch : AppCompatActivity() {
                 plus = plus - 10                //두 수의 합 중 일의자리만 필요
             }
 
+            //결과값을 Toast로 표시
+            Toast.makeText(this, "${plus}", Toast.LENGTH_SHORT).show()
             //timeList에 선수 순서별로 시간 저장
             timeList.add(playerNo, plus)
 

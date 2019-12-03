@@ -3,8 +3,10 @@ package com.example.ddengjabi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isEmpty
 import kotlinx.android.synthetic.main.activity_result.*
 
 class Result : AppCompatActivity() {
@@ -61,10 +63,13 @@ class Result : AppCompatActivity() {
         /*****************************************************/
         //결과보기 버튼 클릭시
         showResultButton.setOnClickListener {
-            for(i in 0 until(resultArr.size) step 1){
-                var textView = TextView(this)
-                textView.text = "${playerList.get(i)}: ${resultArr.get(i)}";
-                resultLayOut.addView(textView)
+
+            if(resultLayOut.isEmpty()){ //결괏값이 없을 경우에만 추가
+                for(i in 0 until(resultArr.size) step 1){
+                    var textView = TextView(this)
+                    textView.text = "${playerList.get(i)}: ${resultArr.get(i)}";
+                    resultLayOut.addView(textView)
+                }
             }
         }
     }
